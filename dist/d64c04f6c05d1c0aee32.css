@@ -1,0 +1,469 @@
+/* 
+ * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
+
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ .myline {
+  height: 20px;
+  color:white;
+  width:350px;
+  background-color: #999999;
+  text-align:center;
+}
+
+.hdline {
+  border: 1px;
+  height: 2px;
+  color:blue;
+  width:350px;
+  background-color: rgb(0, 153, 255);
+} 
+
+ ul {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ .ms-welcome__header {
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 100px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .ms-welcome__main {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex: 1 0 0;
+    flex: 1 0 0;
+    padding: 10px 20px;
+ }
+ 
+ .ms-welcome__main > h2 {
+     width: 100%;
+     text-align: center;
+ }
+ 
+ .ms-welcome__features {
+     list-style-type: none;
+     margin-top: 20px;
+ }
+ 
+ .ms-welcome__features.ms-List .ms-ListItem {
+     padding-bottom: 20px;
+     display: -webkit-flex;
+     display: flex;
+ }
+ 
+ .ms-welcome__features.ms-List .ms-ListItem > .ms-Icon {
+     margin-right: 10px;
+ }
+ 
+ .ms-welcome__action.ms-Button--hero {
+     margin-top: 30px;
+ }
+ 
+.ms-Button.ms-Button--hero .ms-Button-label {
+  color: #0078d7;
+}
+
+.ms-Button.ms-Button--hero:hover .ms-Button-label,
+.ms-Button.ms-Button--hero:focus .ms-Button-label{
+  color: #005a9e;
+  cursor: pointer;
+}
+
+b {
+    font-weight: bold;
+}
+
+.ui-dialog, .ui-dialog-content {
+    box-sizing: content-box;
+	clear: both;
+}
+.ui-dialog-titlebar {
+	height: 16px;
+}
+.ui-dialog-title {
+	position:relative;
+	top: -4px;
+	left: -4px;
+}
+
+.menu {
+  cursor: pointer
+}
+#select-template, #select-car, #select-bike {
+  width: 200px;
+  height:22px;
+}
+#button-insert-motorbike
+ {
+  border: 1px solid;
+}
+#button-insert-car {
+  border: 1px solid;
+}
+
+.div-section {
+  display: none;
+}
+#add-template {
+	cursor: pointer
+}
+#save-template {
+	cursor: pointer
+}
+
+.add-field {
+	cursor: pointer;
+	position: relative;
+	float: right;
+	top: 6px;
+	margin-left: 2px;
+  width: 18px;
+  height: 18px;
+}
+.insert-field-value {
+	cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+.delete-field {
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+}
+.field-name {
+  border: 1px solid;
+}
+.field-value {
+	min-width: 100%;
+  border: 1px solid;
+  margin-bottom:5px;
+}
+
+.ui-dialog-title {
+	margin: 4px
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#dialog-menu {
+  position: fixed;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  top: 100px;
+  width: 60%;
+  left: 20%;
+/*  height: 16%;*/
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: 200; opacity: 0}
+  to {top: 200; opacity: 1}
+}
+
+#menu-template {
+  margin: 0;
+/*  left: 50%;*/
+/*  transform: translate(-50%, 0%);*/
+  width: 100%;
+}
+#menu-setting {
+  margin: 0;
+/*  left: 50%;*/
+/*  transform: translate(-50%, 0%);*/
+  width: 100%;
+}
+#menu-about {
+  margin: 0;
+/*  left: 50%;*/
+/*  transform: translate(-50%, 0%);*/
+  width: 100%;
+}
+.modal-body-overflow {
+	overflow: auto;
+	height: 250px;
+	padding: 10px;
+}
+#dialog-template {
+  display: none;
+  position: fixed;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  top: 100px;
+  width: 80%;
+  left: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+#dialog-newfolder {
+  display: none;
+  position: fixed;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  top: 100px;
+  width: 60%;
+  left: 20%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.dir-delete {
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+}
+.file-delete {
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+}
+#table-file {
+}
+#table-dir {
+}
+.modal-header {
+  height: 44px;
+  padding: 2px 10px;
+  background-color: #3f3f3f;
+  color: white;
+}
+/* Modal Footer */
+.modal-footer {
+  height: 22px;
+  padding: 8px 16px;
+  background-color: #3f3f3f;
+  color: white;
+}
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#dialog-setting {
+  display: none;
+  position: fixed;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  top: 100px;
+  width: 80%;
+  left: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+#dialog-save {
+  display: none;
+  position: fixed;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  top: 100px;
+  width: 80%;
+  left: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+#dialog-overwrite {
+  display: none;
+  position: fixed;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  top: 200px;
+  width: 70%;
+  left: 15%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+#dialog-save-confirm {
+  display: none;
+  position: fixed;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  top: 100px;
+  width: 80%;
+  left: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+#dialog-car-name {
+  display: none;
+  position: fixed;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  top: 100px;
+  width: 80%;
+  left: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+#dialog-about, #dialog-alert {
+  display: none;
+  position: fixed;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  top: 100px;
+  width: 80%;
+  left: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+.copy-doc {
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+}
+.icon-folder {
+	width: 20px;
+	height: 20px;
+}
+#table-manage-template {
+}
+#copied-token {
+  width:90%;
+}
+#new-token {
+  width:90%;
+}
+.section-handler {
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+}
+.table-section {
+}
+.delete-section {
+	cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+.table-fields {
+}
+
+.button-no {
+}
+.ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+#sortable { list-style-type: none; margin: 0; padding: 0;}
+#sortable li { margin: 5px; padding:0; font-size: 1.2em;}
+#dialog-alert {
+}
+#add-field-car, #add-field-bike {
+  margin-top:-5px;
+}
+#save-doc-name {
+ width: 100%;
+}
+#delete-bike {
+}
+#table-setting {
+	padding: 14px;
+}
+#tbody-field-bike {
+}
+#tbody-field-car {
+}
+#div-section-car {
+}
+#div-section-bike {
+}
+#input-new-car-name {
+}
+#button-fillout {
+}
+#button-reset {
+}
+#div-button-basic {
+  position: fixed;
+  bottom: 10px;
+	left: 60%;
+	widows: 100%;
+	float: right;
+}
+#div-button {
+	position: relative;
+	widows: 100%;
+	float: justify;
+}
+#div-alarm {
+	position: relative;
+/*	left: 20%;*/
+	width: 350px;
+	
+	float: right;
+}
+.dir-name, .dir-up {
+  cursor: pointer;
+}
+#alarm-connect {
+	float: right;
+}
